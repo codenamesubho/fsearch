@@ -11,8 +11,8 @@ class app:
         count=0
         
         print "\n\n__________________________________________________________________________"
-        print "\nFiletype = %s,\n Filename = %s,\n Search in : %s ,\n exclude path : %s"%(tag,name,dir,ex)
-        print "\nSearching......\n\n"
+        print "\n Filetype = %s,\n Filename = %s,\n Search in : %s ,\n exclude path : %s"%(tag,name,dir,ex)
+        print "\n\tSearching......\n\n"
         print "\n----------------------------------------------------------------------------"
         if dir==None:
 	  dir='/home/'+os.getlogin()
