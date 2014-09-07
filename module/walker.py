@@ -42,4 +42,4 @@ class app:
 	time_end= time.time()
 	print "\n----------------------------------------------------------------------------"
         
-	print "\n\nTotal results found: %d, Search-time: %0.3f ns\n\n"%(count,time_end-time_start)
+	print "\n\nTotal results found: %d, Search-time: %0.3fs\n\n"%(count,time_end-time_start)
