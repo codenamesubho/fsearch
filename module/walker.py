@@ -2,21 +2,28 @@
 import os
 #from ipdb import set_trace
 import time
-
-
+import sys
 
 class app:
     def search(self,tag=None,name=None,dir=None,ex=None,show=False):
-        time_start=time.time()
         count=0
         
         print "\n\n__________________________________________________________________________"
         print "\n Filetype = %s,\n Filename = %s,\n Search in : %s ,\n exclude path : %s"%(tag,name,dir,ex)
         print "\n\tSearching......\n\n"
         print "\n----------------------------------------------------------------------------"
+        
         if dir==None:
 	  dir='/home/'+os.getlogin()
-	
+	else:
+	  if not(os.path.isdir(dir)):
+	    print ("Woah!! "+dir+" seems to be invalid path,re-check the path and try again!\n")
+	    sys.exit(1)
+        if tag != None and '.' in tag:
+	  tag= tag[1:]
+	  
+        time_start=time.time()
+        
         for root,dirs,files in os.walk(dir):
 	
 	    if show==False:
@@ -39,6 +46,8 @@ class app:
 		
 		#else:
 		#  print dirs
+	if count==0:
+	  print "No files found, try refining your search options."
 	time_end= time.time()
 	print "\n----------------------------------------------------------------------------"
         
