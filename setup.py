@@ -24,8 +24,8 @@ setup(name = "fsearch",
     #'runner' is in the root.
     scripts = ["fsearch"],
     long_description = """This app can be used to search for files in your linux system""", 
-    licence='GPLv2',
-    platform='Linux'
+    license='GPLv2',
+    platforms ='Linux'
     
     #
     #This next part it for the Cheese Shop, look a little down the page.
